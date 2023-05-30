@@ -68,7 +68,7 @@ def extract_content_from_page(page_content):
     return content
 
 # Usage example
-pdf_path = '../tika_test/robotics-11-00130-v2.pdf'
+pdf_path = 'yuan2020.pdf'
 headings, content = extract_headings_and_content(pdf_path)
 for heading, text in zip(headings, content):
     print(heading)
