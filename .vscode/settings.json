@@ -1,0 +1,10 @@
+{
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.formatting.provider": "none",
+    "python.linting.flake8Args": [
+        "--max-line-length=300",
+        "--ignore=E402,F841,F401,E302,E305,W503,E712",
+    ],
+}
