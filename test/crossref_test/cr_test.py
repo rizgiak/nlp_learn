@@ -5,7 +5,7 @@ endpoint = "https://api.crossref.org/works"
 
 # Set up the query parameters
 params = {
-    "query.title": "狭所進入可能な手内回転機能を有するロボットハンド",
+    "query.title": "Conjugated polymers for visible-light-driven photocatalysis",
     "rows": 10  # Number of results to retrieve
 }
 
@@ -21,10 +21,10 @@ if data["status"] == "ok":
     for paper in papers:
         # Access the paper information
         title = paper["title"][0]
-        authors = paper["author"]
+        # authors = paper["author"]
         # Extract other desired information
 
         # Process or display the information as needed
         print("Title:", title)
-        print("Authors:", authors)
+        # print("Authors:", authors)
         print("")
