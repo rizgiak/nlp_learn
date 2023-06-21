@@ -123,12 +123,12 @@ page_count = doc.page_count  # number of pages
 xreflist = []
 imglist = []
 for pno in range(page_count):
-    sg.QuickMeter(
-        "Extract Images",  # show our progress
-        pno + 1,
-        page_count,
-        "*** Scanning Pages ***",
-    )
+    # sg.QuickMeter(
+    #     "Extract Images",  # show our progress
+    #     pno + 1,
+    #     page_count,
+    #     "*** Scanning Pages ***",
+    # )
 
     il = doc.get_page_images(pno)
     imglist.extend([x[0] for x in il])
