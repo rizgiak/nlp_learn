@@ -100,5 +100,35 @@ def crossref_search(title):
     return ""
 
 
+def crossref_similar_search(title, rows):
+    """
+    crossref_search
+    """
+    # Specify the API endpoint
+    ENDPOINT = "https://api.crossref.org/works"
+
+    # Set up the query parameters
+    params = {
+        "query.title": title,
+        "rows": rows  # Number of results to retrieve
+    }
+
+    # Send the API request
+    response = requests.get(ENDPOINT, params=params, timeout=10)
+
+    # Parse the JSON response
+    data = response.json()
+
+    paper_list = []
+    # Extract the relevant information from the response
+    if data["status"] == "ok":
+        papers = data["message"]["items"]
+        if len(papers) > 0:
+            for paper in papers:
+                paper_list.append(paper["title"][0])
+    return paper_list
+            
+
+
 def crossref_reference_doi_list(data):
     return "go"
